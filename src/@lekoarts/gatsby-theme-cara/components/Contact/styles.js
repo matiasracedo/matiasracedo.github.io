@@ -5,9 +5,12 @@ export const Wrapper = styled.div`
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  margin-bottom: 20rem;
 
   @media (max-width: 960px) {
     flex-direction: column;
+    margin-bottom: 25rem;
+    padding: 0;
   }
 `;
 

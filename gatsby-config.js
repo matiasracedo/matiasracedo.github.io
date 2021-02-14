@@ -14,7 +14,7 @@ module.exports = {
     siteUrl: "https://cara.lekoarts.de",
     siteDescription: "Full Stack Developer Portfolio",
     siteLanguage: "en",
-    siteImage: "/banner.jpg",
+    siteImage: "static/favicon.png",
     author: "@lekoarts_de",
   },
   plugins: [

@@ -142,3 +142,4 @@ const theme = merge(tailwind, {
 })
 
 export default theme
+
