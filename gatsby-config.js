@@ -11,11 +11,11 @@ module.exports = {
     siteTitle:"Portfolio",
     siteTitleAlt: "Matías Racedo - Portfolio",
     siteHeadline: "Created with a Gatsby Theme from @lekoarts",
-    siteUrl: "https://cara.lekoarts.de",
+    siteUrl: "https://matiasracedo.github.io/",
     siteDescription: "Full Stack Developer Portfolio",
     siteLanguage: "en",
-    siteImage: "static/favicon.png",
-    author: "@lekoarts_de",
+    siteImage: "/favicon.png",
+    author: "Matias Racedo",
   },
   plugins: [
     {
@@ -41,12 +41,12 @@ module.exports = {
         display: `standalone`,
         icons: [
           {
-            src: `/android-chrome-192x192.png`,
+            src: `/favicon.png`,
             sizes: `192x192`,
             type: `image/png`,
           },
           {
-            src: `/android-chrome-512x512.png`,
+            src: `/favicon.png`,
             sizes: `512x512`,
             type: `image/png`,
           },
