@@ -1,5 +1,4 @@
 import React from 'react';
-import axios from 'axios';
 import { Formik, Form, FastField, ErrorMessage } from 'formik';
 import Recaptcha from 'react-google-recaptcha';
 import * as Yup from 'yup';

@@ -53,6 +53,13 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: `gatsby-source-formium`,
+      options: {
+        projectId: process.env.GATSBY_FORMIUM_PROJECTID,
+        accessToken: process.env.FORMIUM_TOKEN,
+      },
+    },
     'gatsby-plugin-styled-components',
     `gatsby-plugin-sass`,
     `gatsby-plugin-offline`,
