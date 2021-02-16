@@ -26,14 +26,11 @@ export default () => (
     })}
     onSubmit={async ({ name, email, message }, { setSubmitting, resetForm, setFieldValue }) => {
       try {
-        await axios({
+        await fetch({
           method: 'POST',
           url: `${process.env.GATSBY_PORTFOLIO_FORMIK_ENDPOINT}`,
-          mode: "no-cors",
           headers: {
             'Content-Type': 'application/json',
-            'Accept': 'application/json',
-            'Access-Control-Allow-Origin': '*',
           },
           data: JSON.stringify({
             name,
