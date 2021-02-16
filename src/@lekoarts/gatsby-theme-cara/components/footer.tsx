@@ -23,6 +23,7 @@ const Footer = () => {
         sx={{
           justifyContent: `center`,
           alignItems: `center`,
+          flexWrap: `wrap`,
           mt: 3,
           color: `text`,
           fontWeight: `semibold`,

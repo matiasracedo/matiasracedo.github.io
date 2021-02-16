@@ -8,3 +8,11 @@
 .title {
     margin-left: 1rem;
 }
+.intro {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    @media (max-width: 960px) {
+        width: 100%;
+    }
+}

@@ -9,7 +9,7 @@ export const Wrapper = styled.div`
 
   @media (max-width: 960px) {
     flex-direction: column;
-    margin-bottom: 25rem;
+    margin-bottom: 30rem;
     padding: 0;
   }
 `;
@@ -49,5 +49,8 @@ export const Thumbnail = styled.div`
 
   img {
     width: 100%;
+    @media (max-width: 960px) {
+      display: none;
+    }
   }
 `;

@@ -14,7 +14,7 @@ module.exports = {
     siteUrl: "https://matiasracedo.github.io/",
     siteDescription: "Full Stack Developer Portfolio",
     siteLanguage: "en",
-    siteImage: "/favicon.png",
+    siteImage: "favicon.png",
     author: "Matias Racedo",
   },
   plugins: [
@@ -36,7 +36,7 @@ module.exports = {
         short_name: `Cara`,
         description: `Playful and Colorful One-Page portfolio featuring Parallax effects and animations`,
         start_url: `/`,
-        background_color: `#141821`,
+        background_color: `#e2718d`,
         theme_color: `#f6ad55`,
         display: `standalone`,
         icons: [
