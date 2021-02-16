@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui"
+import { jsx, useColorMode } from "theme-ui"
 import Divider from "../elements/divider"
 import Inner from "../elements/inner"
 import Content from "../elements/content"
@@ -11,7 +11,11 @@ import github from '../../../../static/github.svg'
 import linkedin from '../../../../static/linkedin.svg'
 import styles from './project-card.module.scss'
 
-const Hero = ({ offset, factor = 1 }: { offset: number; factor?: number }) => (
+const Hero = ({ offset, factor = 1 }: { offset: number; factor?: number }) => {
+  const [colorMode, setColorMode] = useColorMode()
+  const isDark = colorMode === `dark`
+
+  return (
   <div>
     <Divider speed={0.2} offset={offset} factor={factor}>
       <UpDown>
@@ -50,19 +54,19 @@ const Hero = ({ offset, factor = 1 }: { offset: number; factor?: number }) => (
     target="_blank"
     rel="noreferrer noopener"
     >
-      <img src={github} width='40' heigth='40' alt="github repository" className={styles.svg}/>
+      <img src={github} width='40' heigth='40' alt="github repository" className={isDark ? styles.svg : ``}/>
     </a>
     <a
     href={"https://www.linkedin.com/in/matias-racedo/"}
     target="_blank"
     rel="noreferrer noopener"
     >
-      <img src={linkedin} width='40' heigth='40' alt="website" className={styles.svg}/>
+      <img src={linkedin} width='40' heigth='40' alt="website" className={isDark ? styles.svg : ``}/>
     </a>
     </div>
       </Inner>
     </Content>
   </div>
-)
+)}
 
 export default Hero

@@ -5,6 +5,7 @@ import * as Yup from 'yup';
 import Button from '../../common/Button';
 import Input from '../../common/Input';
 import { Error, Center, InputField } from './styles';
+import formium from '../../../../../lib/formium';
 
 export default () => (
   <Formik
@@ -25,18 +26,13 @@ export default () => (
     })}
     onSubmit={async ({ name, email, message }, { setSubmitting, resetForm, setFieldValue }) => {
       try {
-        await fetch({
-          method: 'POST',
-          url: `${process.env.GATSBY_PORTFOLIO_FORMIK_ENDPOINT}`,
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          data: JSON.stringify({
+        await formium.submitForm('contact',
+          JSON.stringify({
             name,
             email,
             message,
           }),
-        });
+        );
         setSubmitting(false);
         setFieldValue('success', true);
         setTimeout(() => resetForm(), 6000);
@@ -113,5 +109,5 @@ export default () => (
         </Center>
       </Form>
     )}
-  </Formik>
+  </Formik> 
 );
