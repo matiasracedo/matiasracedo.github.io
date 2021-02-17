@@ -15,16 +15,16 @@ type ProjectCardProps = {
 
 
 const ProjectCard = ({ repolink, link, title, children, bg }: ProjectCardProps) => {
+  console.log(repolink)
   return (
   <div
     sx={{
       width: `100%`,
       boxShadow: `lg`,
       position: `relative`,
-      textDecoration: `none`,
       borderRadius: `lg`,
       px: 4,
-      py: 4,
+      py: 3.5,
       color: `white`,
       background: bg || `none`,
       transition: `all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important`,
@@ -44,12 +44,12 @@ const ProjectCard = ({ repolink, link, title, children, bg }: ProjectCardProps) 
         fontSize: [4, 5],
         fontWeight: `medium`,
         lineHeight: 1,
-        marginBottom: 2
+        marginBottom: 1.5
       }}
     >
       {title}
     </div>
-    <div sx={{ px: 3, py: 3, opacity: 0.85, marginBottom: 2, textShadow: `0 2px 10px rgba(0, 0, 0, 0.3)` }}>{children}</div>
+    <div sx={{ px: 3, py: 3, opacity: 0.85, marginBottom: 1.5, textShadow: `0 2px 10px rgba(0, 0, 0, 0.3)` }}>{children}</div>
     <div className={styles.icons} sx={{ opacity: 0.85, marginBottom: 2, textShadow: `0 2px 10px rgba(0, 0, 0, 0.3)` }}>
     <a
     href={"https://github.com/matiasracedo/"}

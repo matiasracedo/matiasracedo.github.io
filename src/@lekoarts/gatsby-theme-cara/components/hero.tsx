@@ -7,15 +7,9 @@ import SVG from "./svg"
 import { UpDown, UpDownWide } from "../styles/animations"
 // @ts-ignore
 import Intro from "../sections/intro"
-import github from '../../../../static/github.svg'
-import linkedin from '../../../../static/linkedin.svg'
-import styles from './project-card.module.scss'
 
-const Hero = ({ offset, factor = 1 }: { offset: number; factor?: number }) => {
-  const [colorMode, setColorMode] = useColorMode()
-  const isDark = colorMode === `dark`
 
-  return (
+const Hero = ({ offset, factor = 1 }: { offset: number; factor?: number }) => (
   <div>
     <Divider speed={0.2} offset={offset} factor={factor}>
       <UpDown>
@@ -48,25 +42,9 @@ const Hero = ({ offset, factor = 1 }: { offset: number; factor?: number }) => {
     <Content sx={{ variant: `texts.bigger` }} speed={0.4} offset={offset} factor={factor}>
       <Inner>
         <Intro />
-        <div className={styles.intro} sx={{ opacity: 0.85, marginBottom: 2, textShadow: `0 2px 10px rgba(0, 0, 0, 0.3)` }}>
-    <a
-    href={"https://github.com/matiasracedo/"}
-    target="_blank"
-    rel="noreferrer noopener"
-    >
-      <img src={github} width='40' heigth='40' alt="github repository" className={isDark ? styles.svg : ``}/>
-    </a>
-    <a
-    href={"https://www.linkedin.com/in/matias-racedo/"}
-    target="_blank"
-    rel="noreferrer noopener"
-    >
-      <img src={linkedin} width='40' heigth='40' alt="website" className={isDark ? styles.svg : ``}/>
-    </a>
-    </div>
       </Inner>
     </Content>
   </div>
-)}
+)
 
 export default Hero

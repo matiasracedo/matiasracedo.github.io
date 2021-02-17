@@ -1,9 +1,9 @@
 {
   "private": true,
-  "name": "cara",
-  "description": "Playful and Colorful One-Page portfolio featuring Parallax effects and animations",
+  "name": "portfolio",
+  "description": "Full Stack Developer Portfolio",
   "version": "0.2.8",
-  "author": "LekoArts <hello@lekoarts.de>",
+  "author": "Matias Racedo",
   "license": "0BSD",
   "starter-name": "gatsby-starter-portfolio-cara",
   "scripts": {

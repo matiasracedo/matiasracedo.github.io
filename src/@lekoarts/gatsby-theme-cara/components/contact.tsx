@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui"
+import { jsx, useColorMode } from "theme-ui"
 import styled from "@emotion/styled"
 import Divider from "../elements/divider"
 import Inner from "../elements/inner"
@@ -9,15 +9,23 @@ import { UpDown, UpDownWide, waveAnimation } from "../styles/animations"
 import Footer from "./footer"
 // @ts-ignore
 import ContactMDX from "../sections/contact"
-import ContactForm from "./Contact/index";
-
+import github from '../../../../static/github.svg'
+import linkedin from '../../../../static/linkedin.svg'
+import email from '../../../../static/email.svg'
+import styles from './project-card.module.scss'
+/* import ContactForm from "./Contact/index";
+ */
 const InnerWave = styled.div`
   path {
     ${waveAnimation(`20s`)};
   }
 `
 
-const Contact = ({ offset, factor = 1 }: { offset: number; factor?: number }) => (
+const Contact = ({ offset, factor = 1 }: { offset: number; factor?: number }) => {
+  const [colorMode, setColorMode] = useColorMode()
+  const isDark = colorMode === `dark`
+
+  return (
   <div>
     <Divider fill="divider" speed={0.2} offset={offset} factor={factor}>
       <div sx={{ position: `absolute`, bottom: 0, width: `full`, transform: `matrix(1, 0, 0, -1, 0, 0)` }}>
@@ -38,7 +46,30 @@ const Contact = ({ offset, factor = 1 }: { offset: number; factor?: number }) =>
     <Content speed={0.4} offset={offset} factor={factor}>
       <Inner>
         <ContactMDX />
-        <ContactForm />
+        <div className={styles.intro} sx={{ opacity: 0.85, textShadow: `0 2px 10px rgba(0, 0, 0, 0.3)` }}>
+        <a
+            href={"mailto:matiasracedo@gmail.com"}
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <img src={email} width='40' heigth='40' alt="website" className={isDark ? styles.svg : ``} />
+          </a>
+        <a
+            href={"https://www.linkedin.com/in/matias-racedo/"}
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <img src={linkedin} width='40' heigth='40' alt="website" className={isDark ? styles.svg : ``} />
+          </a>
+          <a
+            href={"https://github.com/matiasracedo/"}
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <img src={github} width='40' heigth='40' alt="github repository" className={isDark ? styles.svg : ``} />
+          </a>
+        </div>
+        {/* <ContactForm /> */}
       </Inner>
       <Footer />
     </Content>
@@ -58,6 +89,6 @@ const Contact = ({ offset, factor = 1 }: { offset: number; factor?: number }) =>
       <SVG icon="hexa" width={8} stroke color="icon_darkest" left="80%" top="70%" />
     </Divider>
   </div>
-)
+)}
 
 export default Contact
