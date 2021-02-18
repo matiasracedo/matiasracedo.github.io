@@ -3,7 +3,7 @@ import ProjectCard from "../components/project-card"
 
 const components = {
   // eslint-disable-next-line react/display-name
-  ProjectCard: ({ repolink, link, title, bg, children }) => (
+  ProjectCard: ({ link, title, bg, children }) => (
     <ProjectCard link={link} title={title} bg={bg} repolink={repolink}>
       {children}
     </ProjectCard>
