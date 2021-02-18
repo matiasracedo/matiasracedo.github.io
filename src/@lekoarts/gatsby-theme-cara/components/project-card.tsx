@@ -14,8 +14,7 @@ type ProjectCardProps = {
 }
 
 
-const ProjectCard = ({ repolink, link, title, children, bg }: ProjectCardProps) => {
-  console.log(repolink)
+const ProjectCard = ({ link, title, children, bg }: ProjectCardProps) => {
   return (
   <div
     sx={{
@@ -52,14 +51,14 @@ const ProjectCard = ({ repolink, link, title, children, bg }: ProjectCardProps) 
     <div sx={{ px: 3, py: 3, opacity: 0.85, marginBottom: 1.5, textShadow: `0 2px 10px rgba(0, 0, 0, 0.3)` }}>{children}</div>
     <div className={styles.icons} sx={{ opacity: 0.85, marginBottom: 2, textShadow: `0 2px 10px rgba(0, 0, 0, 0.3)` }}>
     <a
-    href={"https://github.com/matiasracedo/"}
+    href={link.split(', ')[1]}
     target="_blank"
     rel="noreferrer noopener"
     >
       <img src={github} width='40' heigth='40' alt="github repository" className={styles.svg}/>
     </a>
     <a
-    href={link}
+    href={link.split(', ')[0]}
     target="_blank"
     rel="noreferrer noopener"
     >
