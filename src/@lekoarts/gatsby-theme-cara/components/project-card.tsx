@@ -6,7 +6,6 @@ import website from '../../../../static/link.svg'
 import styles from './project-card.module.scss'
 
 type ProjectCardProps = {
-  repolink: string
   link: string
   title: string
   children: React.ReactNode
