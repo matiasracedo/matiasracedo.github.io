@@ -39,16 +39,16 @@ const ProjectCard = ({ link, title, children, bg }: ProjectCardProps) => {
         textTransform: `uppercase`,
         letterSpacing: `wide`,
         pt: 4,
-        fontSize: [4, 5],
+        fontSize: [4],
         fontWeight: `bold`,
-        lineHeight: 1,
+        lineHeight: 0.8,
         marginBottom: 1.5
       }}
     >
       {title}
     </div>
-    <div sx={{ px: 3, py: 3, opacity: 0.85, marginBottom: 1.5, textShadow: `0 2px 10px rgba(0, 0, 0, 0.3)` }}>{children}</div>
-    <div className={styles.icons} sx={{ opacity: 0.85, marginBottom: 2, textShadow: `0 2px 10px rgba(0, 0, 0, 0.3)` }}>
+    <div sx={{ px: 1, py: 3, opacity: 0.90, /* marginBottom: 1, */ textShadow: `0 2px 10px rgba(0, 0, 0, 0.3)` }}>{children}</div>
+    <div className={styles.icons} sx={{ opacity: 0.90, padding: 1.5, textShadow: `0 2px 10px rgba(0, 0, 0, 0.3)` }}>
     <a
     href={link.split(', ')[1]}
     target="_blank"
