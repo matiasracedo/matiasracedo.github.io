@@ -27,7 +27,7 @@ const Layout = ({ children, className = `` }: LayoutProps) => (
           borderStyle: `none`,
         },
         pre: {
-          fontFamily: `monospace`,
+          fontFamily: `Roboto Mono, monospace`,
           fontSize: `1em`,
         },
         "[hidden]": {

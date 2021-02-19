@@ -30,22 +30,6 @@ const Footer = () => {
           a: { color: `text` },
         }}
       >
-        <div sx={{ mx: 1 }}>Portfolio created by</div>
-        <Link aria-label="Link to my LinkedIn profile" href="https://www.linkedin.com/in/matias-racedo/">
-          me
-        </Link>
-        <div sx={{ mx: 1 }}>, using a Gatsby</div>
-        <Link
-          aria-label="Link to the theme's GitHub repository"
-          href="https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-cara"
-        >
-          Theme
-        </Link>
-        <div sx={{ mx: 1 }}>by</div>
-        <Link aria-label="Link to the theme author's website" href="https://www.lekoarts.de/en">
-          LekoArts
-        </Link>
-        <div sx={{ mx: 1 }}>as a reference.</div>
       </Flex>
     </Box>
   )

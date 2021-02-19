@@ -40,7 +40,7 @@ const ProjectCard = ({ link, title, children, bg }: ProjectCardProps) => {
         letterSpacing: `wide`,
         pt: 4,
         fontSize: [4, 5],
-        fontWeight: `medium`,
+        fontWeight: `bold`,
         lineHeight: 1,
         marginBottom: 1.5
       }}

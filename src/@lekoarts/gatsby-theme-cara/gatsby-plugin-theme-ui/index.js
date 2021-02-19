@@ -54,6 +54,7 @@ const theme = merge(tailwind, {
       textRendering: `optimizeLegibility`,
       WebkitFontSmoothing: `antialiased`,
       MozOsxFontSmoothing: `grayscale`,
+      fontFamily: `Roboto Mono, monospace`,
       color: `text`,
       backgroundColor: `background`,
       a: {
