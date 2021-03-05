@@ -7,11 +7,25 @@ import SVG from "./svg"
 import { UpDown, UpDownWide } from "../styles/animations"
 // @ts-ignore
 import Intro from "../sections/intro"
+import styles from './hero.module.scss';
 
 
-const Hero = ({ offset, factor = 1 }: { offset: number; factor?: number }) => (
+const Hero = ({ offset, factor = 1 }: { offset: number; factor?: number }) => {
+  const [colorMode, setColorMode] = useColorMode()
+  const isDark = colorMode === `dark`
+  const toggleColorMode = (e: any) => {
+    setColorMode(isDark ? `light` : `dark`)
+  }
+
+  return (
   <div>
-    <Divider speed={0.2} offset={offset} factor={factor}>
+    <nav className={styles.navbar}>
+        <label id="switch" className={styles.switch}>
+            <input type="checkbox" onChange={toggleColorMode} className={styles.slider} />
+            <span className={`${styles.slider} ${styles.slider__round}`}></span>
+        </label>
+    </nav>
+    <Divider speed={0.2} offset={offset} factor={factor} className={styles.hero}>
       <UpDown>
         <SVG icon="astronaut" hiddenMobile width={48} stroke color="icon_orange" left="10%" top="20%" />
         <SVG icon="mercury" width={48} stroke color="icon_red" left="60%" top="70%" />
@@ -40,12 +54,12 @@ const Hero = ({ offset, factor = 1 }: { offset: number; factor?: number }) => (
       <SVG icon="mercury" width={16} stroke color="icon_darker" left="10%" top="50%" />
       <SVG icon="mercury" width={8} stroke color="icon_darker" left="80%" top="70%" />
     </Divider>
-    <Content sx={{ variant: `texts.bigger` }} speed={0.4} offset={offset} factor={factor}>
+    <Content sx={{ variant: `texts.bigger` }} speed={0.4} offset={offset} factor={factor} className={styles.hero}>
       <Inner>
         <Intro />
       </Inner>
     </Content>
   </div>
-)
+)}
 
 export default Hero

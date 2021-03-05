@@ -10,7 +10,7 @@ module.exports = {
     // Of course you can also add new values here to query them like usual
     siteTitle:"Portfolio",
     siteTitleAlt: "Matías Racedo - Portfolio",
-    siteHeadline: "Created with a Gatsby Theme from @lekoarts",
+    siteHeadline: "Site developed with Gatsby and TypeScript",
     siteUrl: "https://matiasracedo.github.io/",
     siteDescription: "Full Stack Developer Portfolio",
     siteLanguage: "en",

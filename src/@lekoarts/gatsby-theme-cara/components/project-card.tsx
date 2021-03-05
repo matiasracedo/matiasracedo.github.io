@@ -22,7 +22,7 @@ const ProjectCard = ({ link, title, children, bg }: ProjectCardProps) => {
       position: `relative`,
       borderRadius: `lg`,
       px: 4,
-      py: 3.5,
+      py: 3,
       color: `white`,
       background: bg || `none`,
       transition: `all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important`,
@@ -38,7 +38,7 @@ const ProjectCard = ({ link, title, children, bg }: ProjectCardProps) => {
       sx={{
         textTransform: `uppercase`,
         letterSpacing: `wide`,
-        pt: 4,
+        pt: 3,
         fontSize: [4],
         fontWeight: `bold`,
         lineHeight: 0.8,
@@ -47,7 +47,7 @@ const ProjectCard = ({ link, title, children, bg }: ProjectCardProps) => {
     >
       {title}
     </div>
-    <div sx={{ px: 1, py: 3, opacity: 0.90, /* marginBottom: 1, */ textShadow: `0 2px 10px rgba(0, 0, 0, 0.3)` }}>{children}</div>
+    <div sx={{ px: 1, py: 3, opacity: 0.90, marginBottom: 1, textShadow: `0 2px 10px rgba(0, 0, 0, 0.3)` }}>{children}</div>
     <div className={styles.icons} sx={{ opacity: 0.90, padding: 1.5, textShadow: `0 2px 10px rgba(0, 0, 0, 0.3)` }}>
     <a
     href={link.split(', ')[1]}
