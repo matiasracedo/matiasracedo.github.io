@@ -12,7 +12,7 @@ module.exports = {
     siteTitleAlt: "Matías Racedo - Portfolio",
     siteHeadline: "Site developed with Gatsby and TypeScript",
     siteUrl: "https://matiasracedo.github.io/",
-    siteDescription: "Full Stack Developer Portfolio",
+    siteDescription: "Hi! I'm Matías, Full Stack Developer. I'm passionate about new technologies and software development, I'm a quick learner and I love challenges!",
     siteLanguage: "en",
     siteImage: "favicon.png",
     author: "Matias Racedo",
