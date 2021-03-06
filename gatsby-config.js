@@ -8,7 +8,7 @@ module.exports = {
   siteMetadata: {
     // You can overwrite values here that are used for the SEO component
     // Of course you can also add new values here to query them like usual
-    siteTitle:"Portfolio",
+    siteTitle:"Matías Racedo - Portfolio",
     siteTitleAlt: "Matías Racedo - Portfolio",
     siteHeadline: "Site developed with Gatsby and TypeScript",
     siteUrl: "https://matiasracedo.github.io/",

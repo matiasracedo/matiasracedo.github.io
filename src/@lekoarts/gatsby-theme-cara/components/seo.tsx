@@ -31,10 +31,11 @@ const SEO = ({ title = ``, description = ``, pathname = ``, image = ``, children
     image: `${siteUrl}${image || defaultImage}`,
   }
   return (
-    <Helmet title={title} defaultTitle={defaultTitle} titleTemplate={`%s | ${siteTitle}`}>
+    <Helmet title={title} defaultTitle={defaultTitle} defaultDescription={description} defaultImage={"https://ibb.co/kqy6mBF"} titleTemplate={`%s | ${siteTitle}`}>
       <html lang={siteLanguage} />
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
+      <meta name='keywords' content="web developer, web development, Matías Racedo, JavaScript, portfolio, software developer, React developer, Henry" />
       <meta property="og:title" content={seo.title} />
       <meta property="og:url" content={seo.url} />
       <meta property="og:description" content={seo.description} />
@@ -45,10 +46,9 @@ const SEO = ({ title = ``, description = ``, pathname = ``, image = ``, children
       <meta name="twitter:title" content={seo.title} />
       <meta name="twitter:url" content={seo.url} />
       <meta name="twitter:description" content={seo.description} />
-      <meta name="twitter:image" content={seo.image} />
+      <meta name="twitter:image" content="https://ibb.co/kqy6mBF" />
       <meta name="twitter:image:alt" content={seo.description} />
       <meta name="twitter:creator" content={author} />
-      <meta name="gatsby-theme" content="@lekoarts/gatsby-theme-cara" />
       <link rel="icon" type="image/png" sizes="32x32" href={withPrefix(`/favicon.png`)} />
       <link rel="icon" type="image/png" sizes="16x16" href={withPrefix(`/favicon.png`)} />
       <link rel="apple-touch-icon" sizes="180x180" href={withPrefix(`/favicon.png`)} />
